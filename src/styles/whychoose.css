@@ -1,0 +1,584 @@
+/* ==========================================
+        WHY CHOOSE SECTION
+========================================== */
+
+.why {
+    padding: 110px 0;
+    background: #f8fbff;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Background Decoration */
+
+.why::before {
+    content: "";
+    position: absolute;
+    width: 420px;
+    height: 420px;
+    background: rgba(13, 71, 161, 0.05);
+    border-radius: 50%;
+    top: -180px;
+    left: -180px;
+}
+
+.why::after {
+    content: "";
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    background: rgba(46, 125, 50, 0.05);
+    border-radius: 50%;
+    bottom: -150px;
+    right: -150px;
+}
+
+/* ==========================================
+        SECTION TITLE
+========================================== */
+
+.section-title {
+    text-align: center;
+    max-width: 760px;
+    margin: auto;
+    margin-bottom: 70px;
+    position: relative;
+    z-index: 2;
+}
+
+.section-title span {
+
+    display: inline-block;
+
+    padding: 10px 22px;
+
+    background: #eaf4ff;
+
+    color: #0d47a1;
+
+    font-weight: 600;
+
+    border-radius: 30px;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 20px;
+}
+
+.section-title h2 {
+
+    font-size: 48px;
+
+    color: #08234e;
+
+    line-height: 1.2;
+
+    margin-bottom: 20px;
+
+    font-weight: 700;
+}
+
+.section-title p {
+
+    color: #666;
+
+    font-size: 17px;
+
+    line-height: 1.8;
+}
+
+/* ==========================================
+        GRID
+========================================== */
+
+.why-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(3,1fr);
+
+    gap: 30px;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+/* ==========================================
+        CARD
+========================================== */
+
+.why-card {
+
+    background: white;
+
+    border-radius: 20px;
+
+    padding: 40px 30px;
+
+    transition: .4s ease;
+
+    box-shadow: 0 15px 40px rgba(0,0,0,.05);
+
+    border: 1px solid #eef2f7;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+/* Top Border Animation */
+
+.why-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:0;
+
+    width:0%;
+
+    height:5px;
+
+    background:linear-gradient(
+    90deg,
+    #0d47a1,
+    #2e7d32
+    );
+
+    transition:.4s;
+
+}
+
+.why-card:hover::before{
+
+    width:100%;
+
+}
+
+.why-card:hover{
+
+    transform:translateY(-12px);
+
+    box-shadow:0 25px 60px rgba(0,0,0,.12);
+
+}
+
+/* ==========================================
+        ICON
+========================================== */
+
+.why-icon{
+
+    width:80px;
+
+    height:80px;
+
+    border-radius:20px;
+
+    background:linear-gradient(
+    135deg,
+    #0d47a1,
+    #2e7d32
+    );
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    color:white;
+
+    font-size:34px;
+
+    margin-bottom:28px;
+
+    transition:.4s;
+
+}
+
+.why-card:hover .why-icon{
+
+    transform:rotate(-10deg) scale(1.08);
+
+}
+
+/* ==========================================
+        TEXT
+========================================== */
+
+.why-card h3{
+
+    font-size:24px;
+
+    color:#08234e;
+
+    margin-bottom:18px;
+
+    font-weight:600;
+
+}
+
+.why-card p{
+
+    color:#666;
+
+    font-size:16px;
+
+    line-height:1.8;
+
+}
+
+/* CSS PART 2*/
+
+/* ==========================================
+        ICON GLOW EFFECT
+========================================== */
+
+.why-icon{
+    position: relative;
+}
+
+.why-icon::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:100%;
+
+    height:100%;
+
+    border-radius:20px;
+
+    background:inherit;
+
+    filter:blur(18px);
+
+    opacity:.25;
+
+    z-index:-1;
+
+}
+
+
+/* ==========================================
+        CARD SHINE EFFECT
+========================================== */
+
+.why-card::after{
+
+    content:"";
+
+    position:absolute;
+
+    top:-120%;
+
+    left:-40%;
+
+    width:70px;
+
+    height:250%;
+
+    background:rgba(255,255,255,.35);
+
+    transform:rotate(25deg);
+
+    transition:.8s;
+
+}
+
+.why-card:hover::after{
+
+    left:140%;
+
+}
+
+
+/* ==========================================
+        TITLE ANIMATION
+========================================== */
+
+.section-title span{
+
+    animation:fadeDown .8s ease;
+
+}
+
+.section-title h2{
+
+    animation:fadeUp 1s ease;
+
+}
+
+.section-title p{
+
+    animation:fadeUp 1.2s ease;
+
+}
+
+
+/* ==========================================
+        CARD ANIMATION
+========================================== */
+
+.why-card{
+
+    animation:cardFade .8s ease both;
+
+}
+
+.why-card:nth-child(1){animation-delay:.1s;}
+.why-card:nth-child(2){animation-delay:.2s;}
+.why-card:nth-child(3){animation-delay:.3s;}
+.why-card:nth-child(4){animation-delay:.4s;}
+.why-card:nth-child(5){animation-delay:.5s;}
+.why-card:nth-child(6){animation-delay:.6s;}
+
+
+/* ==========================================
+        KEYFRAMES
+========================================== */
+
+@keyframes fadeDown{
+
+0%{
+
+opacity:0;
+
+transform:translateY(-30px);
+
+}
+
+100%{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+@keyframes fadeUp{
+
+0%{
+
+opacity:0;
+
+transform:translateY(30px);
+
+}
+
+100%{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+@keyframes cardFade{
+
+0%{
+
+opacity:0;
+
+transform:translateY(40px);
+
+}
+
+100%{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+
+/* ==========================================
+        LARGE DESKTOP
+========================================== */
+
+@media(max-width:1400px){
+
+.section-title h2{
+
+font-size:44px;
+
+}
+
+}
+
+
+/* ==========================================
+        LAPTOP
+========================================== */
+
+@media(max-width:1200px){
+
+.why-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+
+/* ==========================================
+        TABLET
+========================================== */
+
+@media(max-width:992px){
+
+.why{
+
+padding:90px 0;
+
+}
+
+.section-title{
+
+margin-bottom:50px;
+
+}
+
+.section-title h2{
+
+font-size:38px;
+
+}
+
+.section-title p{
+
+font-size:16px;
+
+}
+
+.why-grid{
+
+gap:25px;
+
+}
+
+}
+
+
+/* ==========================================
+        MOBILE
+========================================== */
+
+@media(max-width:768px){
+
+.why-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.section-title h2{
+
+font-size:32px;
+
+}
+
+.section-title p{
+
+font-size:15px;
+
+}
+
+.why-card{
+
+padding:30px 24px;
+
+}
+
+.why-icon{
+
+width:70px;
+
+height:70px;
+
+font-size:28px;
+
+}
+
+.why-card h3{
+
+font-size:22px;
+
+}
+
+}
+
+
+/* ==========================================
+        SMALL MOBILE
+========================================== */
+
+@media(max-width:480px){
+
+.why{
+
+padding:70px 0;
+
+}
+
+.section-title span{
+
+font-size:12px;
+
+padding:8px 18px;
+
+}
+
+.section-title h2{
+
+font-size:28px;
+
+}
+
+.why-card{
+
+padding:28px 20px;
+
+border-radius:16px;
+
+}
+
+.why-card h3{
+
+font-size:20px;
+
+}
+
+.why-card p{
+
+font-size:15px;
+
+line-height:1.7;
+
+}
+
+.why-icon{
+
+width:64px;
+
+height:64px;
+
+font-size:24px;
+
+}
+
+}

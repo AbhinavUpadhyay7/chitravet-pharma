@@ -1,0 +1,398 @@
+/* ===================================================
+                    DIRECTOR HERO
+=================================================== */
+
+.director-hero{
+    height:420px;
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    color:#fff;
+}
+
+.director-hero .container{
+    width:100%;
+}
+
+.director-hero h1{
+    font-size:56px;
+    font-weight:700;
+    margin-bottom:15px;
+}
+
+.director-hero p{
+    font-size:18px;
+    color:rgba(255,255,255,.9);
+}
+
+.director-hero span{
+    color:#6dd56d;
+    margin:0 10px;
+}
+
+/* ===================================================
+                DIRECTOR PROFILE
+=================================================== */
+
+.director-profile{
+    padding:100px 0;
+    background:#f8fbff;
+}
+
+.director-container{
+    display:flex;
+    align-items:center;
+    gap:70px;
+}
+
+/* ===================================================
+                    IMAGE
+=================================================== */
+
+.director-image{
+    flex:1;
+    position:relative;
+}
+
+.director-image img{
+    width:100%;
+    border-radius:22px;
+    display:block;
+    box-shadow:0 20px 45px rgba(0,0,0,.12);
+    transition:.4s;
+}
+
+.director-image img:hover{
+    transform:scale(1.03);
+}
+
+/* ===================================================
+                    CONTENT
+=================================================== */
+
+.director-content{
+    flex:1;
+}
+
+.director-tag{
+    display:inline-block;
+    padding:10px 22px;
+    background:rgba(13,71,161,.1);
+    color:#0d47a1;
+    border-radius:30px;
+    font-size:14px;
+    font-weight:600;
+    letter-spacing:1px;
+    margin-bottom:20px;
+}
+
+.director-content h2{
+    font-size:42px;
+    color:#0d47a1;
+    margin-bottom:10px;
+}
+
+.director-content h4{
+    color:#2e7d32;
+    font-size:20px;
+    margin-bottom:25px;
+    font-weight:600;
+}
+
+.director-content p{
+    font-size:17px;
+    line-height:1.9;
+    color:#555;
+    margin-bottom:35px;
+}
+
+/* ===================================================
+                INFO GRID
+=================================================== */
+
+.director-info{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+}
+
+.director-info div{
+    background:#fff;
+    padding:18px 20px;
+    border-radius:15px;
+    display:flex;
+    align-items:center;
+    gap:12px;
+    font-weight:600;
+    color:#333;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    transition:.35s;
+}
+
+.director-info div:hover{
+    transform:translateY(-6px);
+    box-shadow:0 18px 35px rgba(0,0,0,.12);
+}
+
+.director-info svg{
+    color:#2e7d32;
+    font-size:22px;
+}
+
+/* CSS PART 2 */
+
+/* ===================================================
+        BACKGROUND DECORATION
+=================================================== */
+
+.director-profile{
+    position:relative;
+    overflow:hidden;
+}
+
+.director-profile::before{
+    content:"";
+    position:absolute;
+    width:380px;
+    height:380px;
+    border-radius:50%;
+    background:rgba(13,71,161,.05);
+    top:-170px;
+    right:-150px;
+}
+
+.director-profile::after{
+    content:"";
+    position:absolute;
+    width:280px;
+    height:280px;
+    border-radius:50%;
+    background:rgba(46,125,50,.08);
+    bottom:-120px;
+    left:-100px;
+}
+
+/* ===================================================
+        IMAGE GLOW
+=================================================== */
+
+.director-image::before{
+    content:"";
+    position:absolute;
+    width:340px;
+    height:340px;
+    border-radius:50%;
+    background:rgba(13,71,161,.08);
+    filter:blur(80px);
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    z-index:-1;
+}
+
+/* ===================================================
+        CARD SHINE EFFECT
+=================================================== */
+
+.director-info div{
+    position:relative;
+    overflow:hidden;
+}
+
+.director-info div::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:-120%;
+    width:60px;
+    height:100%;
+    background:rgba(255,255,255,.45);
+    transform:skewX(-25deg);
+    transition:.8s;
+}
+
+.director-info div:hover::before{
+    left:140%;
+}
+
+.director-info div:hover{
+    border:1px solid #0d47a1;
+}
+
+/* ===================================================
+        IMAGE ANIMATION
+=================================================== */
+
+.director-image{
+    animation:fadeLeft 1s ease;
+}
+
+.director-content{
+    animation:fadeRight 1s ease;
+}
+
+@keyframes fadeLeft{
+
+    from{
+        opacity:0;
+        transform:translateX(-40px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateX(0);
+    }
+
+}
+
+@keyframes fadeRight{
+
+    from{
+        opacity:0;
+        transform:translateX(40px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateX(0);
+    }
+
+}
+
+/* ===================================================
+        TAG EFFECT
+=================================================== */
+
+.director-tag{
+    transition:.3s;
+}
+
+.director-tag:hover{
+    background:#0d47a1;
+    color:#fff;
+}
+
+/* ===================================================
+        LARGE LAPTOP
+=================================================== */
+
+@media(max-width:1200px){
+
+.director-container{
+    gap:50px;
+}
+
+.director-content h2{
+    font-size:36px;
+}
+
+}
+
+/* ===================================================
+        TABLET
+=================================================== */
+
+@media(max-width:992px){
+
+.director-profile{
+    padding:80px 0;
+}
+
+.director-container{
+    flex-direction:column;
+}
+
+.director-content{
+    text-align:center;
+}
+
+.director-info{
+    margin-top:30px;
+}
+
+}
+
+/* ===================================================
+        MOBILE
+=================================================== */
+
+@media(max-width:768px){
+
+.director-hero{
+    height:300px;
+}
+
+.director-hero h1{
+    font-size:40px;
+}
+
+.director-hero p{
+    font-size:16px;
+}
+
+.director-content h2{
+    font-size:30px;
+}
+
+.director-content h4{
+    font-size:18px;
+}
+
+.director-content p{
+    font-size:16px;
+}
+
+.director-info{
+    grid-template-columns:1fr;
+}
+
+}
+
+/* ===================================================
+        SMALL MOBILE
+=================================================== */
+
+@media(max-width:480px){
+
+.director-profile{
+    padding:60px 0;
+}
+
+.director-hero{
+    height:250px;
+}
+
+.director-hero h1{
+    font-size:32px;
+}
+
+.director-content h2{
+    font-size:26px;
+}
+
+.director-content h4{
+    font-size:17px;
+}
+
+.director-content p{
+    font-size:15px;
+}
+
+.director-tag{
+    font-size:12px;
+    padding:8px 18px;
+}
+
+.director-info div{
+    padding:16px;
+    font-size:15px;
+}
+
+.director-info svg{
+    font-size:20px;
+}
+
+}

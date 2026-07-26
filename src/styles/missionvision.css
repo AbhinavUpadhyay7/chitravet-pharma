@@ -1,0 +1,349 @@
+/* ===================================================
+                MISSION SECTION
+=================================================== */
+
+.mission-section{
+    padding: 100px 0;
+    background: #ffffff;
+}
+
+.section-heading{
+    text-align: center;
+    max-width: 750px;
+    margin: 0 auto 60px;
+}
+
+.section-heading span{
+    display: inline-block;
+    padding: 10px 22px;
+    background: rgba(13,71,161,.1);
+    color: #0d47a1;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+.section-heading h2{
+    font-size: 42px;
+    color: #0d47a1;
+    margin-bottom: 20px;
+}
+
+.section-heading p{
+    color: #666;
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+/* ===================================================
+                GRID
+=================================================== */
+
+.mission-grid{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 30px;
+}
+
+/* ===================================================
+                CARD
+=================================================== */
+
+.mission-card{
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 40px 30px;
+    text-align: center;
+    box-shadow: 0 15px 35px rgba(0,0,0,.08);
+    transition: .35s;
+    border: 1px solid rgba(13,71,161,.08);
+}
+
+.mission-card:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 25px 45px rgba(0,0,0,.12);
+}
+
+/* ===================================================
+                ICON
+=================================================== */
+
+.icon{
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 25px;
+    border-radius: 50%;
+    background: linear-gradient(135deg,#0d47a1,#1976d2);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    box-shadow: 0 10px 30px rgba(13,71,161,.25);
+}
+
+/* ===================================================
+                CONTENT
+=================================================== */
+
+.mission-card h3{
+    font-size: 26px;
+    color: #0d47a1;
+    margin-bottom: 18px;
+}
+
+.mission-card p{
+    color: #666;
+    line-height: 1.8;
+    font-size: 16px;
+}
+
+/* CSS PART 2 */
+
+/* ===================================================
+        BACKGROUND DECORATION
+=================================================== */
+
+.mission-section{
+    position: relative;
+    overflow: hidden;
+}
+
+.mission-section::before{
+    content:"";
+    position:absolute;
+    width:350px;
+    height:350px;
+    border-radius:50%;
+    background:rgba(13,71,161,.05);
+    top:-150px;
+    right:-120px;
+}
+
+.mission-section::after{
+    content:"";
+    position:absolute;
+    width:250px;
+    height:250px;
+    border-radius:50%;
+    background:rgba(46,125,50,.08);
+    bottom:-100px;
+    left:-80px;
+}
+
+/* ===================================================
+        CARD EFFECT
+=================================================== */
+
+.mission-card{
+    position:relative;
+    overflow:hidden;
+}
+
+.mission-card::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:-120%;
+    width:60px;
+    height:100%;
+    background:rgba(255,255,255,.45);
+    transform:skewX(-25deg);
+    transition:.8s;
+}
+
+.mission-card:hover::before{
+    left:140%;
+}
+
+.mission-card:hover{
+    border-color:#0d47a1;
+}
+
+/* ===================================================
+        ICON EFFECT
+=================================================== */
+
+.icon{
+    transition:.4s;
+}
+
+.mission-card:hover .icon{
+    transform:rotate(360deg) scale(1.08);
+}
+
+/* ===================================================
+        HEADING ANIMATION
+=================================================== */
+
+.section-heading{
+    animation:fadeDown .8s ease;
+}
+
+.mission-grid{
+    animation:fadeUp 1s ease;
+}
+
+@keyframes fadeDown{
+
+    from{
+        opacity:0;
+        transform:translateY(-30px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+@keyframes fadeUp{
+
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+/* ===================================================
+        LARGE LAPTOP
+=================================================== */
+
+@media(max-width:1200px){
+
+.mission-grid{
+
+gap:25px;
+
+}
+
+.section-heading h2{
+
+font-size:38px;
+
+}
+
+}
+
+/* ===================================================
+        TABLET
+=================================================== */
+
+@media(max-width:992px){
+
+.mission-section{
+
+padding:80px 0;
+
+}
+
+.mission-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+/* ===================================================
+        MOBILE
+=================================================== */
+
+@media(max-width:768px){
+
+.section-heading{
+
+margin-bottom:45px;
+
+}
+
+.section-heading h2{
+
+font-size:32px;
+
+}
+
+.section-heading p{
+
+font-size:16px;
+
+}
+
+.mission-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.mission-card{
+
+padding:35px 25px;
+
+}
+
+}
+
+/* ===================================================
+        SMALL MOBILE
+=================================================== */
+
+@media(max-width:480px){
+
+.mission-section{
+
+padding:60px 0;
+
+}
+
+.section-heading span{
+
+font-size:12px;
+
+padding:8px 18px;
+
+}
+
+.section-heading h2{
+
+font-size:28px;
+
+}
+
+.section-heading p{
+
+font-size:15px;
+
+}
+
+.icon{
+
+width:70px;
+
+height:70px;
+
+font-size:28px;
+
+}
+
+.mission-card h3{
+
+font-size:22px;
+
+}
+
+.mission-card p{
+
+font-size:15px;
+
+}
+
+}
